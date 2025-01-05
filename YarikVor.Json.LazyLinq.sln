@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YarikVor.Json.LazyLinq", "YarikVor.Json.LazyLinq\YarikVor.Json.LazyLinq.csproj", "{3C06C13A-58EF-4E54-909D-8D2B546828B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YarikVor.Benchmark", "YarikVor.Benchmark\YarikVor.Benchmark.csproj", "{F6AD81C3-99DD-4255-B294-1021B9E1F4FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YarikVor.Common.PrimitiveConverters", "YarikVor.Common.PrimitiveConverters\YarikVor.Common.PrimitiveConverters.csproj", "{07C3C29A-2BD9-4806-AB45-4F404AD9AF13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C06C13A-58EF-4E54-909D-8D2B546828B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C06C13A-58EF-4E54-909D-8D2B546828B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C06C13A-58EF-4E54-909D-8D2B546828B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C06C13A-58EF-4E54-909D-8D2B546828B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6AD81C3-99DD-4255-B294-1021B9E1F4FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6AD81C3-99DD-4255-B294-1021B9E1F4FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6AD81C3-99DD-4255-B294-1021B9E1F4FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6AD81C3-99DD-4255-B294-1021B9E1F4FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07C3C29A-2BD9-4806-AB45-4F404AD9AF13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07C3C29A-2BD9-4806-AB45-4F404AD9AF13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07C3C29A-2BD9-4806-AB45-4F404AD9AF13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07C3C29A-2BD9-4806-AB45-4F404AD9AF13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

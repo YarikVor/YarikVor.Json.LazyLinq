@@ -1,0 +1,121 @@
+<#@ template language="C#" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections.Generic" #>
+using YarikVor.Json.LazyLinq.JEnitites;
+namespace YarikVor.Common.PrimitiveConverters;
+
+<#
+    Type[] signedIntegerTypes = new Type[]
+    {
+        typeof(sbyte), // 8-бітний цілий тип зі знаком (-128 до 127)
+        typeof(short), // 16-бітний цілий тип зі знаком (-32,768 до 32,767)
+    };
+
+    string[] strBigSignedIntegerTypes = [nameof(Int32), nameof(Int64), "Int128"];
+
+    string[] unsignedSmallIntegerTypes = [nameof(Byte), nameof(UInt16)];
+    string[] unsignedBigIntegerTypes = [nameof(UInt32), nameof(UInt64), "UInt128"];
+#>
+
+public static partial class PrimitiveConvertors
+{
+ 
+<#
+    foreach (var type in signedIntegerTypes)
+    {
+#>
+    public static <#= type.Name #> Parse<#= type.Name #>(ReadOnlySpan<char> source)
+    {
+        var neg = source[0] == '-';
+        var num = 0;
+        var span = source[(neg ? 1 : 0)..];
+        foreach (var c in span)
+        {
+            var minus = c - '0';
+            if (minus is < 0 or > 9)
+                ThrowHelper.Format("");
+            num = num * 10 + minus;
+            if (neg && num is > <#= type.Name #>.MinValue
+                || !neg && num is > <#= type.Name #>.MinValue)
+                ThrowHelper.Overflow("");
+        }
+        return neg ? (<#= type.Name #>)(-num) : (<#= type.Name #>)num;
+    }
+
+<#
+    }
+#>   
+
+<#
+    foreach (var name in strBigSignedIntegerTypes)
+    {
+#>
+    public static <#= name #> Parse<#= name #>(ReadOnlySpan<char> source)
+    {
+        var neg = source[0] == '-';
+        <#= name #> num = 0;
+        var span = source[(neg ? 1 : 0)..];
+        foreach (var c in span)
+        {
+            var minus = c - '0';
+            if (minus is < 0 or > 9)
+                ThrowHelper.Format("");
+            checked {
+                num = num * 10 + minus;
+            }
+        }
+        return neg ? -num : num;
+    }
+<#
+    }
+#>   
+
+<#
+    foreach (var name in unsignedSmallIntegerTypes)
+    {
+#>
+    public static <#= name #> Parse<#= name #>(ReadOnlySpan<char> source)
+    {
+        uint num = 0;
+        foreach (var c in source)
+        {
+            var minus = (uint)(c - '0');
+            if (minus > 9)
+                ThrowHelper.Format("");
+            num = num * 10 + minus;
+            
+            if (num > <#= name #>.MaxValue)
+                ThrowHelper.Overflow("");
+        }
+        return (<#= name #>)num;
+    }
+<#
+    }
+#>   
+
+<#
+    foreach (var name in unsignedBigIntegerTypes)
+    {
+#>
+    public static <#= name #> Parse<#= name #>(ReadOnlySpan<char> source)
+    {
+        <#= name #> num = 0;
+        foreach (var c in source)
+        {
+            var minus = (uint)(c - '0');
+            if (minus > 9)
+                ThrowHelper.Format("");
+            var unsigned = (<#= name #>)minus;
+            checked {
+                num = num * 10 + unsigned;
+            }
+        }
+        return num;
+    }
+<#
+    }
+#>   
+
+
+}

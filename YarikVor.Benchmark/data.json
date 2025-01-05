@@ -1,0 +1,132 @@
+[
+  {
+    "id": 1,
+    "name": "Item 1 Alpha",
+    "description": "A unique item in category 1 with special properties.",
+    "details": {
+      "info": "Additional data 12 Z"
+    },
+    "tags": [
+      "tag1",
+      "tag5",
+      "tag3"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Item 2 Beta",
+    "description": "This is a general item in category 2 with an interesting feature.",
+    "details": {
+      "info": "Extra info 53 X"
+    },
+    "tags": [
+      "tag2",
+      "tag4",
+      "tag6"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Item 3 Gamma",
+    "description": "An item with mixed attributes, common in category 1.",
+    "details": {
+      "info": "Data snippet 89 V"
+    },
+    "tags": [
+      "tag4",
+      "tag9",
+      "tag1"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Item 4 Delta",
+    "description": "Item 4 with advanced functionalities in category 3.",
+    "details": {
+      "info": "Supplementary data 12 Y"
+    },
+    "tags": [
+      "tag8",
+      "tag2",
+      "tag5"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Item 5 Epsilon",
+    "description": "A rare item found in category 2, highly valuable.",
+    "details": {
+      "info": "Data point 55 W"
+    },
+    "tags": [
+      "tag6",
+      "tag7",
+      "tag2"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Item 6 Zeta",
+    "description": "Item 6 is a limited edition, sought after by collectors.",
+    "details": {
+      "info": "Insightful info 22 P"
+    },
+    "tags": [
+      "tag1",
+      "tag8",
+      "tag4"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Item 7 Theta",
+    "description": "A versatile item with high adaptability, used in various scenarios.",
+    "details": {
+      "info": "Bonus info 13 M"
+    },
+    "tags": [
+      "tag3",
+      "tag10",
+      "tag7"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Item 8 Iota",
+    "description": "This item provides significant advantages in category 4.",
+    "details": {
+      "info": "Additional knowledge 71 L"
+    },
+    "tags": [
+      "tag9",
+      "tag3",
+      "tag2"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Item 9 Kappa",
+    "description": "Item with exceptional qualities, primarily used in category 2.",
+    "details": {
+      "info": "Extra knowledge 42 Q"
+    },
+    "tags": [
+      "tag7",
+      "tag10",
+      "tag6"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Item 10 Lambda",
+    "description": "An all-purpose item, known for its flexibility in category 5.",
+    "details": {
+      "info": "Detailed info 10 O"
+    },
+    "tags": [
+      "tag5",
+      "tag8",
+      "tag3"
+    ]
+  }
+]
